@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: springboot-eso
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:postgresql://${rds.host}/${rds.name}
+    username: ${rds.username}
+    password: ${rds.password}
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+greeting:
+  message: hello

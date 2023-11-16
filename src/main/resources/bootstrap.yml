@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    kubernetes:
+      config:
+        enabled: true
+        sources:
+          - namespace: toolbox
+            name: rds-secret
+          - namespace: toolbox
+            name: demo-secret
+      reload:
+        enabled: true
+        mode: event

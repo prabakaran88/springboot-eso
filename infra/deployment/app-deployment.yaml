@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-eso
+spec:
+  selector:
+    matchLabels:
+      app: springboot-eso
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: springboot-eso
+    spec:
+      serviceAccount: k8-application-sa
+      containers:
+        - name: springboot-eso
+          image: innotigers/springboot-eso:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:   # Setting Enviornmental Variables
+            - name: SPRING_CLOUD_BOOTSTRAP_ENABLED
+              value: "true"
+            - name: SPRING_CLOUD_KUBERNETES_SECRETS_ENABLEAPI
+              value: "true"
+          envFrom:
+            - secretRef:
+                name: rds-secret
+            - secretRef:
+                name: demo-secret
+---
+apiVersion: v1 # Kubernetes API version
+kind: Service # Kubernetes resource kind we are creating
+metadata: # Metadata of the resource kind we are creating
+  name: springboot-eso-svc
+spec:
+  type: ClusterIP # type of the service.
+  selector:
+    app: springboot-eso
+  ports:
+    - name: http
+      port: 8080 # The port that the service is running on in the cluster
+      protocol: TCP
+
+
