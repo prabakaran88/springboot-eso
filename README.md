@@ -1,4 +1,4 @@
-# springboot-argocd
+# springboot-eso
 Springboot CRUD Operation with External Secret Operator(ESO)
 
 ## Pre-requisites
