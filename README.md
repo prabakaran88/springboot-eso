@@ -349,6 +349,7 @@ kubectl port-forward -n toolbox svc/springboot-eso-svc 8090:8080
 4. https://github.com/luafanti/arogcd-vault-plugin-with-helm/tree/main
 5. https://github.com/argoproj-labs/argocd-vault-plugin/issues/495
 6. https://verifa.io/blog/comparing-methods-for-accessing-secrets-in-vault-from-kubernetes/index.html
+7. https://external-secrets.io/latest/introduction/stability-support/
 
 ## useful commands
 ```text
