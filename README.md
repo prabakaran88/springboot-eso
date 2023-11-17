@@ -84,6 +84,9 @@ vault read auth/kubernetes/config
 # read configured External Secret Operator(ESO) authenticate Role for verification
 vault read auth/kubernetes/role/eso-role
 ```
+## How ESO Works?
+![Alt text](eso_how_it_works.png?raw=true "How it works?")
+
 ## Installing and Configuring the External Secrets Operator
 ### SecretStore  
 The SecretStore resource is to separate concerns of authentication/access and the actual Secret and configuration needed for workloads.
