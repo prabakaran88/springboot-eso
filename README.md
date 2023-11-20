@@ -349,10 +349,9 @@ kubectl port-forward -n toolbox svc/springboot-eso-svc 8090:8080
 1. https://dev.to/luafanti/injecting-secrets-from-vault-into-helm-charts-with-argocd-49k
 2. https://luafanti.medium.com/injecting-secrets-from-vault-into-helm-charts-with-argocd-43fc1df57e74#:~:text=Vault%20setup,inject%20later%20into%20Helm%20Charts.&text=Now%20we%20need%20to%20create,will%20authenticate%20ArgoCD%20in%20Vault.
 3. https://piotrminkowski.com/2022/08/08/manage-secrets-on-kubernetes-with-argocd-and-vault/
-4. https://github.com/luafanti/arogcd-vault-plugin-with-helm/tree/main
-5. https://github.com/argoproj-labs/argocd-vault-plugin/issues/495
-6. https://verifa.io/blog/comparing-methods-for-accessing-secrets-in-vault-from-kubernetes/index.html
-7. https://external-secrets.io/latest/introduction/stability-support/
+4. https://colinwilson.uk/2022/08/22/secrets-management-with-external-secrets-argo-cd-and-gitops/
+5. https://verifa.io/blog/comparing-methods-for-accessing-secrets-in-vault-from-kubernetes/index.html
+6. https://external-secrets.io/latest/introduction/stability-support/
 
 ## useful commands
 ```text
